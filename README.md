@@ -8,5 +8,7 @@ This is very simplistic, and really just a demonstration of what Pico can do wit
 
 The initial version fades in reg, green, blue and white showing both their dithered and non-dithered brightnesses. Just use the while(1) loop in main to add whatever animations you like and they'll be picked up automatically.
 
+There is some flickering at really low brightness levels. You may wish to skip 1 (and possibly) 2 in your code. Different WS2812b seem to have different levels of this.
+
 # Wiring
-Connect Vin to VBUS, GND to GND and Data In to GPIO 1 (note NOT 0)
+Connect Vin to VBUS, GND to GND and Data In to GPIO 1 (note NOT 0). Some sensitive ws2812b may not work with this setup, in which case you'll need a level shifter to boost the voltage up to 5V. See the Adafruit uberguide for details on power.
