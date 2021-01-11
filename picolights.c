@@ -16,7 +16,7 @@
 #define STRING_LEN 32
 
 int bit_depth=12;
-const int PIN_TX = 1;
+const int PIN_TX = 0;
 
 uint32_t pixelsb[STRING_LEN];
 uint32_t errorsb[STRING_LEN];
