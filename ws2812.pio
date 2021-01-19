@@ -30,7 +30,7 @@ do_zero:
 
 static inline void ws2812_program_init(PIO pio, uint sm, uint offset, uint pin, float freq, bool rgbw) {
 
-    pio_gpio_select(pio, pin);
+    pio_gpio_init(pio, pin);
     pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, true);
 
     pio_sm_config c = ws2812_program_get_default_config(offset);
@@ -43,7 +43,7 @@ static inline void ws2812_program_init(PIO pio, uint sm, uint offset, uint pin, 
     sm_config_set_clkdiv(&c, div);
 
     pio_sm_init(pio, sm, offset, &c);
-    pio_sm_enable(pio, sm, true);
+    pio_sm_set_enabled(pio, sm, true);
 }
 %}
 
