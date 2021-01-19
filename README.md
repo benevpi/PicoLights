@@ -14,4 +14,4 @@ There is some flickering at really low brightness levels. You may wish to skip 1
 Connect Vin to VBUS, GND to GND and Data In to GPIO 1 (note NOT 0). Some sensitive ws2812b may not work with this setup, in which case you'll need a level shifter to boost the voltage up to 5V. See the Adafruit uberguide for details on power.
 
 # Find out more
-There's a full tutorial on how this works in HackSpace magazine issue 39. Download it for free or buy in print at (https://hsmag.cc/issue39)[https://hsmag.cc/issue39]
+There's a full tutorial on how this works in HackSpace magazine issue 39. Download it for free or buy in print at https://hsmag.cc/issue39 .
