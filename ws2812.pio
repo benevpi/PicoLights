@@ -65,7 +65,7 @@ static inline void ws2812_program_init(PIO pio, uint sm, uint offset, uint pin, 
 
 static inline void ws2812_parallel_program_init(PIO pio, uint sm, uint offset, uint pin_base, uint pin_count, float freq) {
     for(uint i=pin_base; i<pin_base+pin_count; i++) {
-        pio_gpio_select(pio, i);
+        pio_gpio_init(pio, i);
     }
     pio_sm_set_consecutive_pindirs(pio, sm, pin_base, pin_count, true);
 
@@ -80,6 +80,6 @@ static inline void ws2812_parallel_program_init(PIO pio, uint sm, uint offset, u
     sm_config_set_clkdiv(&c, div);
 
     pio_sm_init(pio, sm, offset, &c);
-    pio_sm_enable(pio, sm, true);
+    pio_sm_set_enabled(pio, sm, true);
 }
 %}
